@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Create Post</h2>
+    <hr />
+    <form class="form-horizontal" name="formPost" novalidate="novalidate">
+        <div class="alert alert-success" ng-show="show">Your request was successful processed.</div>
+        <div class="alert alert-danger" ng-show="error">Sorry!, Fill the form correctly..</div>
+        <div class="form-group">
+            <label for="postTitle" class="col-sm-2 control-label">Title:</label>
+            <div class="col-sm-6">
+                <input type="text" name="title" class="form-control" id="postTitle" ng-model="data.title" placeholder="Post title" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="postDescription" class="col-sm-2 control-label">Description:</label>
+            <div class="col-sm-6">
+                <textarea type="text" rows="6" name="description"  class="form-control" id="postDescription" ng-model="data.description" placeholder="Post description..."></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="postUsername" class="col-sm-2 control-label">Username:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" name="username" id="postUsername" ng-model="data.username" placeholder="Enter username" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-6">
+                <button type="submit" name="submit" class="btn btn-primary" ng-disabled="formPost.$invalid" ng-click="createPost()">Save Post</button>
+                <button type="button" class="btn btn-default" ng-click="postPage()">Cancel</button>
+            </div>
+        </div>
+    </form>
+
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+      <h1 class="lead">Posts</h1>
+      <div class="alert alert-success" ng-show="success">{{success.success}}</div>
+      <div class="alert alert-danger" ng-show="post.result == '' || post.result == undefined">
+             Sorry, No post were found. <br /> login or create an account to post
+      </div>
+       <ul class="col-md-6">
+           <li ng-repeat="posts in post.result" style="list-style-type:none">
+              <div class="well">
+                  <h4 class="lead text-capitalize">Title: {{posts.title | uppercase}}</h4>
+                  <p>Description: {{posts.description}}</p>
+                  <span>By: {{posts.username}}</span>
+                  <button type="button" class="btn btn-link" ng-show="postEnabled" ng-click='removePost(posts.title)'>Remove</button>
+              </div>
+           </li>
+       </ul>
+       <div class="col-md-6">
+          Featured posts..
+
+          <br />
+
+          <p>{{$scope.recordId}}</p>
+       </div>
+</div>
+

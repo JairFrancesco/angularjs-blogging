@@ -1,0 +1,18 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li><a href="#/post">Post</a></li> 
+            <li ng-show="postEnabled"><a href="#/new-post">Create Post</a></li> 
+        </ul>
+        
+        
+        <form class="form-inline pull-right" style="margin-top:6px;" ng-show="displayForm">
+          <a href="#/login" class="btn btn-primary">Login</a>          
+          <a href="#/register" class="btn btn-default">Create Account</a> 
+        </form> 
+        <form class="form-inline pull-right" style="margin-top:6px;" ng-show="postEnabled">
+           <button class="btn btn-primary" ng-click="logoutUser()">Logout</button> 
+        </form> 
+             
+    </div>
+</nav>
